@@ -4,8 +4,8 @@ export const Friend = ({ avatar, name, isOnline, id }) => {
   return (
     <FriendCard key={id} isOnline={isOnline}>
       <span></span>
-      <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
+      <img src={avatar} alt="User avatar" width="48" />
+      <p>{name}</p>
     </FriendCard>
   );
 };
