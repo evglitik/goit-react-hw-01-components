@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
+import { Table, TableRows } from './TransactionHistory.styled';
+import { firstToUperScapes } from 'utils/divideSign';
 
 export const TransactionsHistory = ({ transactions }) => {
   return (
-    <table className="transaction-history">
+    <Table>
       <thead>
         <tr>
           <th>Type</th>
@@ -12,18 +14,18 @@ export const TransactionsHistory = ({ transactions }) => {
       </thead>
 
       <tbody>
-        {transactions.map(transition => {
+        {transactions.map((transition, inx) => {
           const { id, type, amount, currency } = transition;
           return (
-            <tr key={id}>
-              <td>{type}</td>
+            <TableRows key={id} index={inx}>
+              <td>{firstToUperScapes(type)}</td>
               <td>{amount}</td>
               <td>{currency}</td>
-            </tr>
+            </TableRows>
           );
         })}
       </tbody>
-    </table>
+    </Table>
   );
 };
 

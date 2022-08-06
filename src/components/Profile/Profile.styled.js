@@ -1,12 +1,5 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.div`
-  border-radius: ${p => `${p.theme.radii.medium}`};
-  box-shadow: ${p => `${p.theme.shadows.shadow}`};
-  padding-top: ${p => `${p.theme.space[4]}px`};
-  display: inline-block;
-`;
-
 export const Description = styled.div`
   padding: ${p => `${p.theme.space[4]}px`};
   text-align: center;
@@ -81,22 +74,3 @@ export const Stats = styled.ul`
       ${p => `${p.theme.colors.secondary}`};
   }
 `;
-
-// const string = 'ABCD';
-
-// function stringScope(str) {
-//   if (str.length >= 4) {
-//     let arr = [...str];
-//     arr[0] += ',';
-//     return arr.join('');
-//   } else {
-//     return;
-//   }
-// }
-
-// // const stringNew = stringScope(string);
-// let strAr = [...string]
-// strAr[0] += ',';
-
-// console.log(stringScope(string));
-// // console.log(strAr)

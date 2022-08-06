@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import { divideSign } from 'utils/divideSign';
+import { Box } from 'Box';
 import {
-  Container,
   Description,
   Name,
   Tag,
   Location,
   Stats,
 } from './Profile.styled';
+
 
 export const Profile = ({
   user: {
@@ -19,7 +20,7 @@ export const Profile = ({
   },
 }) => {
   return (
-    <Container>
+    <Box pt={4} borderRadius='medium' boxShadow='shadow'>
       <Description>
         <img src={avatar} alt={`Avatar ${username}`} width="120" />
         <Name>{username}</Name>
@@ -41,7 +42,7 @@ export const Profile = ({
           <span>{divideSign(likes)}</span>
         </li>
       </Stats>
-    </Container>
+    </Box>
   );
 };
 

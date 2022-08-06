@@ -1,22 +1,24 @@
 import PropTypes from 'prop-types';
+import { Box } from 'Box';
+import { StatisticTitle, StatisticItem  } from './Statistics.styled';
 
 export const Statistics = ({ title, data }) => {
   return (
-    <section className="statistics">
-      {title !== undefined && <h2 className="title">{title}</h2>}
+    <Box boxShadow="shadow" borderRadius="normal" as="section">
+      {title !== undefined && <StatisticTitle>{title}</StatisticTitle>}
 
-      <ul>
+      <Box display="grid" gridTemplateColumns="5fr 5fr 5fr 5fr 5fr" as="ul">
         {data.map(stat => {
           const { label, percentage, id } = stat;
           return (
-            <li key={id} className="item">
-              <span className="label">{label}</span>
-              <span className="percentage">{percentage}</span>
-            </li>
+            <StatisticItem key={id}>
+              <span>{label}</span>
+              <span>{percentage}</span>
+            </StatisticItem>
           );
         })}
-      </ul>
-    </section>
+      </Box>
+    </Box>
   );
 };
 

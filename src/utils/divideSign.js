@@ -8,3 +8,8 @@ export function divideSign(num) {
       return str;
   }
 }
+
+export const firstToUperScapes = str => {
+  if (!str) return str;
+  return str[0].toUpperCase() + str.slice(1);
+}
