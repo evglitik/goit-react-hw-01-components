@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Table = styled.table`
+  margin-top: ${p => `${p.theme.space[4]}px`}; 
   text-decoration: none;
   border-collapse: collapse;
   width: 872px;

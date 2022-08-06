@@ -9,8 +9,6 @@ import { FriendList } from "components/Friend.list/FriendList";
 import { TransactionsHistory } from "components/TransactionHistory/TransactionHistory";
 import { Box } from "Box";
 
-
-
 export const App = () => {
   return (
     <Box
